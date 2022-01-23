@@ -63,7 +63,7 @@ ECHO     C   -   CONTINUE USING THIS FILE.
 ECHO.
 ECHO.
 ECHO.
-ECHO NOTE: IF YOU HAVE ATTMEPTED TO AUTOATMICALLY UPDATE ALREADY AND YOU CONTINUE
+ECHO NOTE: IF YOU HAVE ATTEMPTED TO AUTOMATICALLY UPDATE ALREADY AND YOU CONTINUE
 ECHO       TO GET THIS UPDATE SCREEN, PLEASE UTILIZE THE MANUAL UPDATE OPTION.
 ECHO.
 ECHO.
@@ -191,7 +191,7 @@ ECHO.
 ECHO      A) Split a current vERAM ZLC GeoMaps.xml or vSTARS Video Maps.xml into multiple individual files.
 ECHO.
 ECHO.
-ECHO      B) Take the export data from the FE-BUDDY parser and transfer to coorisponding EDIT files.
+ECHO      B) Take the export data from the FE-BUDDY parser and transfer to corresponding EDIT files.
 ECHO.
 ECHO.
 ECHO      C) Change the vERAM data Release Date and the .VERSION command.
@@ -1182,7 +1182,7 @@ ECHO  *** FE-BUDDY Output to EDIT FOLDERS ***
 ECHO.
 ECHO.
 ECHO  This BATCH File will take the export data from the FE-BUDDY parser and
-ECHO  transfer the following to the coorisponding files:
+ECHO  transfer the following to the corresponding files:
 ECHO.
 ECHO.
 ECHO         ALIAS:                                  EDIT ALIAS:
