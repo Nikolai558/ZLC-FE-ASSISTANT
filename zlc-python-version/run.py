@@ -6,6 +6,7 @@ import gui_layouts as layouts
 WINDOW_SIZE = (800, 500)
 
 # Create the layout for the window
+# Layouts must be ordered from most bottom to top otherwise window spacing issues happen.
 LAYOUT = [layouts.main_frame, layouts.msg_frame]
 
 
