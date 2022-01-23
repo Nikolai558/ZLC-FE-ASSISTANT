@@ -10,7 +10,7 @@ B)  Combine split GeoMap files into a single ZLC GeoMaps.xml.
       - Ensure only the files that you want to combine are in the directory you select.
 
 
-C) Take the export data from the NASR_2_SCT parser and transfer to coorisponding EDIT files.
+C) Take the export data from the NASR_2_SCT parser and transfer to corresponding EDIT files.
 
 
 D) Combine and Transfer all SCT2 EDIT files to the Pre-Release ZLC SECTOR.sct2 file.
