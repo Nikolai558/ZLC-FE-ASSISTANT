@@ -24,7 +24,7 @@ class AssistantWindow:
                 break
 
             # user clicked 'Continue Button' in the msg_frame
-            if event == 'Continue':
+            if event == '-MSG-CONTINUE-':
                 self.window['-MSG-FRAME-'].update(visible=False)
 
         self.window.close()

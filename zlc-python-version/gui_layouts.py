@@ -9,9 +9,18 @@ sg.theme(THEME)  # Add a touch of color
 
 msg_frame = [
     sg.Frame('',
-             [[sg.Text(msg.ADVISORY_HEADER, justification='center', expand_x=True, font=msg.FONT_LARGE)],
-              [sg.Text(msg.ADVISORY, font=msg.FONT_REGULAR, expand_x=True, pad=((60, 60), (0, 50)))],
-              [sg.Column([[sg.Button('Continue', size=(20, 0), font=msg.FONT_REGULAR)]], justification='center')]
+             [[sg.Text(msg.ADVISORY_HEADER,
+                       justification='center',
+                       expand_x=True,
+                       font=msg.FONT_LARGE)],
+              [sg.Text(msg.ADVISORY,
+                       font=msg.FONT_REGULAR,
+                       expand_x=True,
+                       pad=((60, 60), (0, 50)))],
+              [sg.Column([[sg.Button('Continue', size=(20, 0),
+                                     font=msg.FONT_REGULAR,
+                                     key='-MSG-CONTINUE-')]],
+                         justification='center')]
               ],
              key='-MSG-FRAME-', expand_x=True, expand_y=True, border_width=0, visible=True)
 ]
