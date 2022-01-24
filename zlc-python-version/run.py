@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-import gui_layouts as layouts
+import gui_frames as frames
 
 # Static Window Variables.
 WINDOW_SIZE = (800, 500)
@@ -7,9 +7,9 @@ WINDOW_SIZE = (800, 500)
 # Create the layout for the window
 # Layouts must be ordered from most bottom to top otherwise window spacing issues happen.
 LAYOUT = [[
-    sg.Column([layouts.progress_frame], key='-NOT_IMPLEMENTED-FRAME-', expand_x=True, expand_y=True, visible=False),
-    sg.Column([layouts.main_frame], key='-MAIN-FRAME-', expand_x=True, expand_y=True, visible=False),
-    sg.Column([layouts.msg_frame], key='-MSG-FRAME-', expand_x=True, expand_y=True, visible=True)
+    sg.Column([frames.progress_frame], key='-NOT_IMPLEMENTED-FRAME-', expand_x=True, expand_y=True, visible=False),
+    sg.Column([frames.main_frame], key='-MAIN-FRAME-', expand_x=True, expand_y=True, visible=False),
+    sg.Column([frames.msg_frame], key='-MSG-FRAME-', expand_x=True, expand_y=True, visible=True)
 ]]
 
 
