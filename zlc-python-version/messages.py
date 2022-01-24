@@ -11,8 +11,8 @@ ADVISORY_HEADER = """
 ADVISORY = """
 Many of the functions within this BATCH file assume that
 the user has access to the ZLC FACILITY DROPBOX
-directories and that Dropbox is installed on the
-C: drive like so:
+directories and that Dropbox is installed on the 'C:' drive
+like so:
 
 C:\\Users\\JohnSmith\\Dropbox\\ZLC 6. Internal Facility Files
 """
