@@ -59,7 +59,53 @@ main_frame = [
              expand_x=True, expand_y=True, border_width=0, visible=True)
 ]
 
+split_maps_frame = [
+    sg.Frame('',
+             [[sg.Text(msg.SPLIT_MAPS_HEADER,
+                       justification='center',
+                       expand_x=True,
+                       font=msg.FONT_LARGE)],
+              [sg.Text(msg.SPLIT_MAPS,
+                       justification='center',
+                       font=msg.FONT_REGULAR,
+                       expand_x=True,
+                       pad=((60, 60), (0, 50)))],
+              [sg.Column([[sg.Button('vSTARS', size=(20, 0),
+                                     font=msg.FONT_REGULAR,
+                                     key='-SPLIT-vSTARS-'),
+                           sg.Button('vERAM', size=(20, 0),
+                                     font=msg.FONT_REGULAR,
+                                     key='-SPLIT-vERAM-')],
+                          ],
+                         justification='center')]
+              ],
+             expand_x=True, expand_y=True, border_width=0, visible=True)
+]
+
 progress_frame = [
+    sg.Frame('',
+             [[sg.Text("{HEADER}",
+                       justification='center',
+                       expand_x=True,
+                       font=msg.FONT_LARGE,
+                       key='-PROG-HEADER-')],
+              [sg.Text("\n{Description}",
+                       justification='center',
+                       font=msg.FONT_REGULAR,
+                       expand_x=True,
+                       pad=((60, 60), (0, 50)),
+                       key='-PROG-DESCRIPTION-')],
+              [sg.Column([[
+                  # TEMP - Button to exit out of the Progress Screen
+                  sg.Button('Continue', size=(20, 0),
+                            font=msg.FONT_REGULAR,
+                            key='-PROG-CONTINUE-')]],
+                         justification='center')]
+              ],
+             expand_x=True, expand_y=True, border_width=0, visible=True)
+]
+
+not_implemented_frame = [
     sg.Frame('',
              [[sg.Text("THIS FUNCTION HAS NOT BEEN IMPLEMENTED",
                        justification='center',
@@ -72,7 +118,7 @@ progress_frame = [
                        expand_x=True,
                        pad=((60, 60), (0, 50)))],
               [sg.Column([[
-                  # TEMP - Button to exit out of the Progress Screen
+                  # TEMP - Button to exit out of the NOT_IMPLEMENTED Screen
                   sg.Button('Continue', size=(20, 0),
                             font=msg.FONT_REGULAR,
                             key='-NOT_IMPLEMENTED-CONTINUE-')]],

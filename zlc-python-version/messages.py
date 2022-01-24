@@ -28,3 +28,11 @@ PROGRAM_OPTIONS = [
     ' vSTARS/vERAM, load new Alias/POF/GEOMAPs as needed \n\tand export the .gz to Pre-Release folder.',
     'Transfer Pre-Release Files to ZLC Public Folder.'
 ]
+
+SPLIT_MAPS_HEADER = """
+*** SPLIT MAPS ***
+"""
+
+SPLIT_MAPS = """
+\n\nWhat Type of map are you splitting\n
+"""
