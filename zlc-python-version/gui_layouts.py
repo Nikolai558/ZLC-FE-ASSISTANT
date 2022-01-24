@@ -14,6 +14,7 @@ msg_frame = [
                        expand_x=True,
                        font=msg.FONT_LARGE)],
               [sg.Text(msg.ADVISORY,
+                       justification='center',
                        font=msg.FONT_REGULAR,
                        expand_x=True,
                        pad=((60, 60), (0, 50)))],
@@ -22,38 +23,59 @@ msg_frame = [
                                      key='-MSG-CONTINUE-')]],
                          justification='center')]
               ],
-             key='-MSG-FRAME-', expand_x=True, expand_y=True, border_width=0, visible=True)
+             expand_x=True, expand_y=True, border_width=0, visible=True)
 ]
 
 main_frame = [
     sg.Frame('', [
-                [
-                    sg.Button('A)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[0], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('B)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[1], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('C)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[2], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('D)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[3], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('E)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[4], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('F)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[5], font=msg.FONT_REGULAR)
-                ],
-                [
-                    sg.Button('G)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
-                    sg.Text(msg.PROGRAM_OPTIONS[6], font=msg.FONT_REGULAR)
-                ]],
-             key='-MAIN-FRAME-', expand_x=True, expand_y=True, border_width=0, visible=False)
+        [
+            sg.Button('A)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[0], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('B)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[1], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('C)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[2], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('D)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[3], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('E)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[4], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('F)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[5], font=msg.FONT_REGULAR)
+        ],
+        [
+            sg.Button('G)', font=msg.FONT_REGULAR, size=(5, 2), pad=((2, 10), (10, 10))),
+            sg.Text(msg.PROGRAM_OPTIONS[6], font=msg.FONT_REGULAR)
+        ]],
+             expand_x=True, expand_y=True, border_width=0, visible=True)
+]
+
+progress_frame = [
+    sg.Frame('',
+             [[sg.Text("PROGRAM PROGRESS",
+                       justification='center',
+                       expand_x=True,
+                       font=msg.FONT_LARGE)],
+              [sg.Text("PLACE PROGRAM PROGRESS AND WHAT ITS DOING HERE...",
+                       justification='center',
+                       font=msg.FONT_REGULAR,
+                       expand_x=True,
+                       pad=((60, 60), (0, 50)))],
+              [sg.Column([[
+                  # TEMP - Button to exit out of the Progress Screen
+                  sg.Button('Continue', size=(20, 0),
+                            font=msg.FONT_REGULAR,
+                            key='-PRG-CONTINUE-')]],
+                         justification='center')]
+              ],
+             expand_x=True, expand_y=True, border_width=0, visible=True)
 ]
