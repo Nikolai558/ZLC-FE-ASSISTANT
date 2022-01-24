@@ -61,11 +61,12 @@ main_frame = [
 
 progress_frame = [
     sg.Frame('',
-             [[sg.Text("PROGRAM PROGRESS",
+             [[sg.Text("THIS FUNCTION HAS NOT BEEN IMPLEMENTED",
                        justification='center',
                        expand_x=True,
                        font=msg.FONT_LARGE)],
-              [sg.Text("PLACE PROGRAM PROGRESS AND WHAT ITS DOING HERE...",
+              [sg.Text("To help with development or get status updates please checkout: \n"
+                       "https://github.com/Nikolai558/ZLC-FE-ASSISTANT\n",
                        justification='center',
                        font=msg.FONT_REGULAR,
                        expand_x=True,
@@ -74,7 +75,7 @@ progress_frame = [
                   # TEMP - Button to exit out of the Progress Screen
                   sg.Button('Continue', size=(20, 0),
                             font=msg.FONT_REGULAR,
-                            key='-PRG-CONTINUE-')]],
+                            key='-NOT_IMPLEMENTED-CONTINUE-')]],
                          justification='center')]
               ],
              expand_x=True, expand_y=True, border_width=0, visible=True)
