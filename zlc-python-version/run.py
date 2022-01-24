@@ -16,6 +16,8 @@ LAYOUT = [[
 class AssistantWindow:
     def __init__(self):
         self.window = sg.Window('ZLC FE Assistant', LAYOUT, size=WINDOW_SIZE)
+        self.update_check()
+        self.event_loop()
 
     def update_check(self):
         # TODO - Create and Implement Update_Check
@@ -88,4 +90,3 @@ class AssistantWindow:
 
 if __name__ == '__main__':
     program = AssistantWindow()
-    program.event_loop()
