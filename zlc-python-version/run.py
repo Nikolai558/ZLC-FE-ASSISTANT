@@ -1,5 +1,9 @@
 import PySimpleGUI as sg
+import requests as requests
+
 import gui_frames as frames
+
+PROGRAM_VERSION = '1.0.0'
 
 # Static Window Variables.
 WINDOW_SIZE = (800, 500)
@@ -21,7 +25,14 @@ class AssistantWindow:
 
     def update_check(self):
         # TODO - Create and Implement Update_Check
-        pass
+        github_base_url = 'https://raw.githubusercontent.com/KSanders7070/ZLC-FE-ASSISTANT/'
+        version_url = github_base_url + 'main/Version_Check'
+        r = requests.get(version_url)
+        if r.status_code == 200:
+            if r.text.split('-')[1] != PROGRAM_VERSION:
+                print('Program needs updated...')
+        else:
+            print('Request to Github provided a status code of {0} -'.format(r.status_code), r.reason)
 
     def event_loop(self):
         """In charge of keeping GUI open and checking user actions."""
