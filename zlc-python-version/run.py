@@ -1,3 +1,5 @@
+import time
+
 import PySimpleGUI as sg
 import requests as requests
 
@@ -40,7 +42,7 @@ class AssistantWindow:
         """In charge of keeping GUI open and checking user actions."""
         while True:
             # events = user actions; values = user input
-            event, values = self.window.read()
+            event, values = self.window.read(timeout=500)
 
             # user clicked 'X' to close the window.
             if event == sg.WIN_CLOSED:
@@ -100,14 +102,20 @@ class AssistantWindow:
 
             if event == '-SPLIT-vSTARS-':
                 self.window['-SPLIT-MAPS-FRAME-'].update(visible=False)
-                self.window['-PROG-HEADER-'].update('SPLITTING vSTARS VideoMaps')
-                self.window['-PROG-DESCRIPTION-'].update('stuff..')
+                self.window['-PROG-HEADER-'].update('SPLITTING vSTARS VideoMaps\n')
                 self.window['-PROG-FRAME-'].update(visible=True)
-                # TODO - Create and Implement split vstars video maps
+                self.split_maps(self.window['-PROG-BAR-'])
 
         self.window.close()
 
-    def split_maps(self):
+    def split_maps(self, progress_bar):
+        self.window['-PROG-CONTINUE-'].update(disabled=True)
+        # TODO - DO split maps logic here
+        for i in range(10):
+            if i > 0:
+                time.sleep(.5)
+            progress_bar.update(i+1, 10)
+        self.window['-PROG-CONTINUE-'].update(disabled=False)
         pass
 
 

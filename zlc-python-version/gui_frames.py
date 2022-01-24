@@ -89,17 +89,20 @@ progress_frame = [
                        expand_x=True,
                        font=msg.FONT_LARGE,
                        key='-PROG-HEADER-')],
-              [sg.Text("\n{Description}",
-                       justification='center',
-                       font=msg.FONT_REGULAR,
-                       expand_x=True,
-                       pad=((60, 60), (0, 50)),
-                       key='-PROG-DESCRIPTION-')],
+              [sg.Column([[
+                  sg.ProgressBar(1,
+                              orientation='h',
+                              size=(20, 20),
+                              key='-PROG-BAR-',
+                              expand_x=True,
+                              )]],
+                         justification='center')],
               [sg.Column([[
                   # TEMP - Button to exit out of the Progress Screen
                   sg.Button('Continue', size=(20, 0),
                             font=msg.FONT_REGULAR,
-                            key='-PROG-CONTINUE-')]],
+                            key='-PROG-CONTINUE-',
+                            disabled=True)]],
                          justification='center')]
               ],
              expand_x=True, expand_y=True, border_width=0, visible=True)
